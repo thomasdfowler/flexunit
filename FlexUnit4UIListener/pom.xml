@@ -8,7 +8,7 @@
     <version>4.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>flexunit</artifactId>
+  <artifactId>flexunit-ui-listener</artifactId>
   <packaging>swc</packaging>
 
   <build>
@@ -16,45 +16,24 @@
       <plugin>
         <groupId>org.sonatype.flexmojos</groupId>
         <artifactId>flexmojos-maven-plugin</artifactId>
-        <configuration>
-          <defines>
-            <property>
-              <name>CONFIG::useFlexClasses</name>
-              <value>true</value>
-            </property>
-          </defines>
-        </configuration>
       </plugin>
     </plugins>
   </build>
 
   <dependencies>
     <dependency>
-      <groupId>com.adobe.flex.framework</groupId>
-      <artifactId>flex-framework</artifactId>
-      <type>pom</type>
-    </dependency>
-
-    <dependency>
       <groupId>org.flexunit</groupId>
       <artifactId>flexunit</artifactId>
-      <version>1.0</version>
+      <version>${project.version}</version>
       <type>swc</type>
-      <scope>merged</scope>
     </dependency>
     <dependency>
-      <groupId>com.digitalprimates.fluint</groupId>
-      <artifactId>fluint</artifactId>
-      <version>1.2</version>
+      <!-- BUG remove after flexmojos-4.0-beta-3 gets released -->
+      <groupId>com.adobe.flex.framework</groupId>
+      <artifactId>halo</artifactId>
+      <version>${flex.sdk.version}</version>
       <type>swc</type>
-      <scope>merged</scope>
-    </dependency>
-    <dependency>
-      <groupId>hamcrest-as3</groupId>
-      <artifactId>hamcrest-as3</artifactId>
-      <version>1.1.0</version>
-      <type>swc</type>
-      <scope>merged</scope>
+      <scope>theme</scope>
     </dependency>
   </dependencies>
 

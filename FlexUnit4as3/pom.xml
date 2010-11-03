@@ -8,10 +8,11 @@
     <version>4.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>flexunit</artifactId>
+  <artifactId>flexunit-as3</artifactId>
   <packaging>swc</packaging>
 
   <build>
+    <sourceDirectory>../FlexUnit4/src</sourceDirectory>
     <plugins>
       <plugin>
         <groupId>org.sonatype.flexmojos</groupId>
@@ -20,9 +21,23 @@
           <defines>
             <property>
               <name>CONFIG::useFlexClasses</name>
-              <value>true</value>
+              <value>false</value>
             </property>
           </defines>
+          <includeClasses>
+            <scan>
+              <includes>
+                <include>**.*</include>
+              </includes>
+              <excludes>
+                <exclude>org.fluint.uiImpersonation.flex.FlexEnvironmentBuilder</exclude>
+                <exclude>org.flexunit.internals.TextListener</exclude>
+                <exclude>org.fluint.sequence.SequenceBindingWaiter</exclude>
+                <exclude>org.flexunit.internals.listeners.FluintDisplayListenerView</exclude>
+              </excludes>
+            </scan>
+          </includeClasses>
+          <ditaSkip>true</ditaSkip>
         </configuration>
       </plugin>
     </plugins>
@@ -30,9 +45,19 @@
 
   <dependencies>
     <dependency>
+    <!-- BUG on flexmojos 4.0-beta-2 can be removed after b3 -->
       <groupId>com.adobe.flex.framework</groupId>
-      <artifactId>flex-framework</artifactId>
-      <type>pom</type>
+      <artifactId>framework</artifactId>
+      <type>zip</type>
+      <classifier>configs</classifier>
+      <version>${flex.sdk.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.adobe.flex.framework</groupId>
+      <artifactId>playerglobal</artifactId>
+      <type>swc</type>
+      <classifier>10.1</classifier>
+      <version>${flex.sdk.version}</version>
     </dependency>
 
     <dependency>

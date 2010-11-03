@@ -9,3 +9,4 @@ FlexUnit4AntTasks/target/*
 .metadata
 .actionScriptProperties
 */.settings
+*/target
