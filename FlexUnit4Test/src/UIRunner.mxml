@@ -7,6 +7,8 @@
 		<![CDATA[
 			import compilationSuite.SuitesToRun;
 			
+			import org.flexunit.events.rule.EventRuleSuite;
+			import org.flexunit.events.rule.cases.SyncEventTesting;
 			import org.flexunit.runner.FlexUnitCore;
 			
 			private var core:FlexUnitCore;

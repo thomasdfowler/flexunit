@@ -36,12 +36,14 @@
       <attribute name="include" />
       <attribute name="useflex" />
       <sequential>
-	     <mxmlc file="@{runner}" output="@{swf}">
+	     <mxmlc file="@{runner}" output="@{swf}" static-link-runtime-shared-libraries="true" >
 	        <library-path dir="${lib.loc}" append="true">
 	            <include name="@{include}" />
 	            <include name="*cilistener*.swc" />
+             	<include name="fluint*.swc" />
 	            <include name="*flexcoverlistener*.swc" />
 	            <include name="FlexUnit1Lib.swc" />
+				<include name="FlexUnit1Lib.swc" />
 	            <include name="hamcrest-as3*.swc" />
     	        <include name="mock-as3.swc" />
         	    <include name="mockolate*.swc" />
@@ -57,7 +59,7 @@
       <attribute name="swf" />
       <attribute name="reportdir" />
       <sequential>
-         <flexunit swf="@{swf}" toDir="@{reportdir}" haltonfailure="false" verbose="true" />
+         <flexunit swf="@{swf}" toDir="@{reportdir}" haltonfailure="false" verbose="true" player="air" />
       </sequential>
    </macrodef>
    
@@ -118,6 +120,7 @@
       <delete dir="${dist.loc}" />
       <delete>
          <fileset dir="${lib.loc}">
+			<exclude name="fluint-1_2.swc" />
             <exclude name="FlexUnit1Lib.swc" />
             <exclude name="hamcrest-as3*.swc" />
             <exclude name="mock-as3.swc" />
@@ -145,6 +148,9 @@
             <include name="*.swc" />
          </fileset>
          <fileset dir="${basedir}/../FlexUnit4FlexCoverListener/target">
+            <include name="*.swc" />
+         </fileset>
+		 <fileset dir="${basedir}/../FlexUnit4FluintExtensions/target">
             <include name="*.swc" />
          </fileset>
       </copy>

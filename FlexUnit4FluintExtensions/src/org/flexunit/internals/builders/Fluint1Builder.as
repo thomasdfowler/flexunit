@@ -47,7 +47,7 @@ package org.flexunit.internals.builders {
 	 * if it does not fulfill this criteria, no <code>IRunner</code> will be generated.
 	 */
 	public class Fluint1Builder extends RunnerBuilderBase {
-
+		
 		/**
 		 * @inheritDoc
 		 */
@@ -78,6 +78,7 @@ package org.flexunit.internals.builders {
 		public function isFluintSuiteOrCase( klassInfo:Klass ):Boolean {
  			var testCase:Boolean = klassInfo.descendsFrom( net.digitalprimates.fluint.tests.TestCase );
 			var testSuite:Boolean = klassInfo.descendsFrom( net.digitalprimates.fluint.tests.TestSuite );
+
 			return ( testCase || testSuite );  
 		}		
 	}
