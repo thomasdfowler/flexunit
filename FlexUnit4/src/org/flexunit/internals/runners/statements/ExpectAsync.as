@@ -51,7 +51,9 @@ package org.flexunit.internals.runners.statements {
 	import org.flexunit.token.AsyncTestToken;
 	import org.flexunit.token.ChildResult;
 	import org.flexunit.utils.ClassNameUtil;
+	CONFIG::useFlexClasses{
 	import org.fluint.sequence.SequenceBindingWaiter;
+	}
 	import org.fluint.sequence.SequenceRunner;
 	
 	use namespace flexunit_internal;

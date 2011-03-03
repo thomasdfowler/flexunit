@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.flexunit</groupId>
+    <artifactId>flexunit-parent</artifactId>
+    <version>4.1-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>flexunit-as3</artifactId>
+  <packaging>swc</packaging>
+
+  <build>
+    <sourceDirectory>../FlexUnit4/src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <groupId>org.sonatype.flexmojos</groupId>
+        <artifactId>flexmojos-maven-plugin</artifactId>
+        <configuration>
+          <defines>
+            <property>
+              <name>CONFIG::useFlexClasses</name>
+              <value>false</value>
+            </property>
+          </defines>
+          <includeClasses>
+            <scan>
+              <includes>
+                <include>**.*</include>
+              </includes>
+              <excludes>
+                <exclude>org.fluint.uiImpersonation.flex.FlexEnvironmentBuilder</exclude>
+                <exclude>org.flexunit.internals.TextListener</exclude>
+                <exclude>org.fluint.sequence.SequenceBindingWaiter</exclude>
+                <exclude>org.flexunit.internals.listeners.FluintDisplayListenerView</exclude>
+              </excludes>
+            </scan>
+          </includeClasses>
+          <ditaSkip>true</ditaSkip>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+    <!-- BUG on flexmojos 4.0-beta-2 can be removed after b3 -->
+      <groupId>com.adobe.flex.framework</groupId>
+      <artifactId>framework</artifactId>
+      <type>zip</type>
+      <classifier>configs</classifier>
+      <version>${flex.sdk.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.adobe.flex.framework</groupId>
+      <artifactId>playerglobal</artifactId>
+      <type>swc</type>
+      <classifier>10.1</classifier>
+      <version>${flex.sdk.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.flexunit</groupId>
+      <artifactId>flexunit</artifactId>
+      <version>1.0</version>
+      <type>swc</type>
+      <scope>merged</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.digitalprimates.fluint</groupId>
+      <artifactId>fluint</artifactId>
+      <version>1.2</version>
+      <type>swc</type>
+      <scope>merged</scope>
+    </dependency>
+    <dependency>
+      <groupId>hamcrest-as3</groupId>
+      <artifactId>hamcrest-as3</artifactId>
+      <version>1.1.0</version>
+      <type>swc</type>
+      <scope>merged</scope>
+    </dependency>
+  </dependencies>
+
+</project>
