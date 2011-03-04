@@ -45,10 +45,10 @@ public class FlexUnitTaskHarness extends TestCase
       libraryFileSet.setDir(new File("test/sandbox/libs"));
       fixture.addLibrary(libraryFileSet);
       
-      String frameworkLibsPath = project.getProperty( "FLEX_HOME" );
+      String flexHome = project.getProperty( "FLEX_HOME" );
       
       FileSet externalLibraryFileSet = new FileSet();
-      externalLibraryFileSet.setDir( new File( frameworkLibsPath + "/frameworks" ) );
+      externalLibraryFileSet.setDir( new File( flexHome + "/frameworks" ) );
       externalLibraryFileSet.setIncludes( "libs/**/*.swc" );
       externalLibraryFileSet.setIncludes( "locale/en_US/**/*.swc" );
       fixture.addLibrary( externalLibraryFileSet );
