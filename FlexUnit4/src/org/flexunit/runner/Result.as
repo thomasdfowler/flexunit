@@ -164,5 +164,9 @@ class Listener extends RunListener {
 	override public function testStarted( description:IDescription ):void {
 		org.flexunit.Assert.resetAssertionsFields();
 		flexunit.framework.Assert.resetAssertionsMade();
-	}	
+	}
+	
+	public function Listener()
+	{
+	}
 }

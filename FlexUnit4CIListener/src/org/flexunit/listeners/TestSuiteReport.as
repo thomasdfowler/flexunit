@@ -11,6 +11,10 @@ package org.flexunit.listeners
 		// TODO: [XB] this can be refactored to Vector
 		// Vector< TextCaseReport >
 		//Let's not do that, we don't want an FP10 dependency
-		public var methods : Array = new Array()
+		public var methods : Array = new Array();
+		
+		public function TestSuiteReport() 
+		{
+		}
 	}
 }

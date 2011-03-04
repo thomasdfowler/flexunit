@@ -31,10 +31,7 @@
 	import flash.display.DisplayObject;
 	import flash.display.Sprite;
 	
-	import mx.core.FlexVersion;
-	
 	import org.flexunit.Assert;
-	import org.fluint.uiImpersonation.VisualTestEnvironmentBuilder;
 
 	/**
 	 *

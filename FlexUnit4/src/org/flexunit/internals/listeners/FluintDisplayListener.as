@@ -97,5 +97,9 @@ package org.flexunit.internals.listeners
 			testResults.addItem(failure);
 			
 		}
+		
+		public function FluintDisplayListener()
+		{
+		}
 	}
 }

@@ -2,6 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
   <parent>
     <groupId>org.flexunit</groupId>
     <artifactId>flexunit-parent</artifactId>
@@ -22,19 +26,21 @@
 
   <dependencies>
     <dependency>
+      <groupId>com.adobe.flex.framework</groupId>
+      <artifactId>flex-framework</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
       <groupId>org.flexunit</groupId>
-      <artifactId>flexunit</artifactId>
+      <artifactId>flexunit-as3</artifactId>
       <version>${project.version}</version>
       <type>swc</type>
     </dependency>
     <dependency>
-      <!-- BUG remove after flexmojos-4.0-beta-3 gets released -->
-      <groupId>com.adobe.flex.framework</groupId>
-      <artifactId>halo</artifactId>
-      <version>${flex.sdk.version}</version>
+      <groupId>org.flexunit</groupId>
+      <artifactId>flexunit</artifactId>
+      <version>1.0</version>
       <type>swc</type>
-      <scope>theme</scope>
     </dependency>
   </dependencies>
-
 </project>

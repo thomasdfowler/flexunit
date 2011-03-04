@@ -281,5 +281,9 @@ package org.flexunit.flexui.data
          }
          return formattedStack;
       }
+	  
+	  public function TestFunctionRowData() 
+	  {
+	  }
    }
 }

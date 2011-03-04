@@ -21,6 +21,7 @@
    <properties>
       <flex.sdk.version>3.5.0.12683</flex.sdk.version>
       <flexmojos.version>3.6.1</flexmojos.version>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
    </properties>
 
    <build>
@@ -95,5 +96,5 @@
          </snapshots>
       </pluginRepository>
    </pluginRepositories>
-   
+
 </project>

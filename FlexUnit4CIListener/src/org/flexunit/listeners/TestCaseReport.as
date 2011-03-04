@@ -5,5 +5,9 @@ package org.flexunit.listeners
 		public var classname : String;
 		public var name : String;
 		public var time : Number;
+		
+		public function TestCaseReport() 
+		{
+		}
 	}
 }

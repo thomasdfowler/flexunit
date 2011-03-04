@@ -122,5 +122,9 @@ package org.flexunit.flexui.data
                            assertionsMade,
                            isAverage );
       }
+	  
+	  public function AbstractRowData() 
+	  {
+	  }
    }
 }

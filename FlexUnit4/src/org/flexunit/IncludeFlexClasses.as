@@ -40,7 +40,6 @@ package org.flexunit
 	import org.fluint.sequence.SequenceWaiter;
 	import org.fluint.uiImpersonation.UIImpersonator;
 	import org.fluint.uiImpersonation.VisualTestEnvironmentBuilder;
-	import org.fluint.uiImpersonation.flex.FlexEnvironmentBuilder;
 	import org.fluint.uiImpersonation.flex.FlexMXVisualTestEnvironment;
 
 	CONFIG::useFlexClasses{
@@ -68,14 +67,16 @@ package org.flexunit
 		private var flu10:SequenceWaiter;
 		private var flu11:VisualTestEnvironmentBuilder;
 		
-		private var flu13:TextListener;
 		private var flu14:FlexMXVisualTestEnvironment;
 
-	CONFIG::useFlexClasses{
-		private var flu4:SequenceBindingWaiter;
-		private var flu13:TextListener;
-		private var flu15:FlexEnvironmentBuilder;
-	}
+		CONFIG::useFlexClasses{
+			private var flu4:SequenceBindingWaiter;
+			private var flu13:TextListener;
+			private var flu15:FlexEnvironmentBuilder;
+		}
 
+		public function IncludeFlexClasses()
+		{
+		}
 	}
 }

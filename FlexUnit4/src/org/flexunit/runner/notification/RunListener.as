@@ -118,5 +118,9 @@ package org.flexunit.runner.notification {
 		 */
 		public function testIgnored( description:IDescription ):void {
 		}
+		
+		public function RunListener()
+		{
+		}
 	}
 }

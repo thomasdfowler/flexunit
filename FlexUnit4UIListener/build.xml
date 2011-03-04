@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="FlexUnit4UIListener" basedir="." default="package">
-   <import file="${basedir}/../utils.xml" />
+   <!--<import file="${basedir}/../utils.xml" />-->
+   <import file="../utils.xml" />
    <property environment="env" />
 
    <!-- Configuration -->

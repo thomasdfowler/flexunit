@@ -80,5 +80,9 @@ package org.flexunit.flexui.data
       {
          return _selectedTestFunctionStatus;
       }
+	  
+	  public function FilterTestsModel() 
+	  {
+	  }
    }
 }

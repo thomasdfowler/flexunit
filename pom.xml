@@ -28,9 +28,9 @@
   </licenses>
 
   <properties>
-    <flex.sdk.version>4.5.0.17855</flex.sdk.version>
+    <flex.sdk.version>4.5.0.18623</flex.sdk.version>
     <maven.version>3.0</maven.version>
-    <flexmojos.version>4.0-beta-2</flexmojos.version>
+    <flexmojos.version>4.0-beta-4</flexmojos.version>
   </properties>
 
   <build>
@@ -103,24 +103,24 @@
 
   <developers>
     <developer>
-      <id>TODO</id>
-      <name>TODO</name>
-      <email>TODO at gmail.com</email>
+      <id>thomasdfowler</id>
+      <name>Thomas Fowler</name>
+      <email>thomasdfowler at gmail.com</email>
       <roles>
         <role>Author Developer</role>
       </roles>
-      <timezone>-3</timezone>
+      <timezone>-6</timezone>
     </developer>
   </developers>
 
   <contributors>
     <contributor>
-      <name>Marvin Herman Froeder</name>
-      <email>velo.br at gmail.com</email>
+      <name>Thomas Fowler</name>
+      <email>thomasdfowler at gmail.com</email>
       <roles>
         <role>Mavenization</role>
       </roles>
-      <timezone>-3</timezone>
+      <timezone>-6</timezone>
     </contributor>
   </contributors>
 
