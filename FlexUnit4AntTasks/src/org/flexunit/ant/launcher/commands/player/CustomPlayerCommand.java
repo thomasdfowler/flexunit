@@ -95,10 +95,9 @@ public class CustomPlayerCommand implements PlayerCommand
     * behavior of the Execute task.  Needed especially when user expects environment to be 
     * available to custom command (e.g. - xvnc with player not on path).
     */
-   @SuppressWarnings("unchecked")
    private String[] getJointEnvironment()
    {
-      Vector procEnvironment = Execute.getProcEnvironment();
+      Vector<?> procEnvironment = Execute.getProcEnvironment();
       String[] environment = new String[procEnvironment.size() + proxiedCommand.getEnvironment().length];
       System.arraycopy(procEnvironment.toArray(), 0, environment, 0, procEnvironment.size());
       System.arraycopy(proxiedCommand.getEnvironment(), 0, environment, procEnvironment.size(), proxiedCommand.getEnvironment().length);

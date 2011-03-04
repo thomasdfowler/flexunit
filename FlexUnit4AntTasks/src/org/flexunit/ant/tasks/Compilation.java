@@ -5,9 +5,9 @@ import java.io.File;
 import org.apache.tools.ant.BuildException;
 import org.apache.tools.ant.Project;
 import org.apache.tools.ant.taskdefs.Java;
+import org.apache.tools.ant.types.Commandline.Argument;
 import org.apache.tools.ant.types.FilterSet;
 import org.apache.tools.ant.types.FilterSetCollection;
-import org.apache.tools.ant.types.Commandline.Argument;
 import org.apache.tools.ant.types.resources.FileResource;
 import org.apache.tools.ant.types.resources.URLResource;
 import org.apache.tools.ant.util.ResourceUtils;
@@ -77,7 +77,7 @@ public class Compilation
          File runner = new File(workingDir.getAbsolutePath() + File.separatorChar + TESTRUNNER_FILE);
          
          //Template location in JAR
-         URLResource template = new URLResource(getClass().getResource("/" + TESTRUNNER_TEMPLATE));
+         URLResource template = new URLResource( getClass().getResource( "/" + TESTRUNNER_TEMPLATE ) );
          
          //Create tokens to filter
          FilterSet filters = new FilterSet();
@@ -108,7 +108,8 @@ public class Compilation
       }
       catch (Exception e)
       {
-         throw new BuildException("Could not create test runner from template.", e);
+    	  e.printStackTrace();
+    	  throw new BuildException("Could not create test runner from template.", e);
       }
    }
    

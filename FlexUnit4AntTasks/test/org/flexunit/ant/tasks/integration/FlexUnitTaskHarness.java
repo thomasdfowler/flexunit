@@ -26,7 +26,7 @@ public class FlexUnitTaskHarness extends TestCase
       fixture.setPort(1024);
       fixture.setTimeout(10000);
       fixture.setBuffer(555555);
-      //fixture.setSWF("test/TestRunner.swf");
+//      fixture.setSWF("test/TestRunner.swf");
       fixture.setToDir("test/sandbox");
       fixture.setVerbose(true);
       fixture.setFailureproperty("failedtests");
@@ -44,6 +44,14 @@ public class FlexUnitTaskHarness extends TestCase
       FileSet libraryFileSet = new FileSet();
       libraryFileSet.setDir(new File("test/sandbox/libs"));
       fixture.addLibrary(libraryFileSet);
+      
+      String frameworkLibsPath = project.getProperty( "FLEX_HOME" );
+      
+      FileSet externalLibraryFileSet = new FileSet();
+      externalLibraryFileSet.setDir( new File( frameworkLibsPath + "/frameworks" ) );
+      externalLibraryFileSet.setIncludes( "libs/**/*.swc" );
+      externalLibraryFileSet.setIncludes( "locale/en_US/**/*.swc" );
+      fixture.addLibrary( externalLibraryFileSet );
    }
 
    public void testExecute()
