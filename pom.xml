@@ -167,7 +167,6 @@
 	<modules>
 		<module>FlexUnit4AntTasks</module>
 		<module>FlexUnit4</module>
-		<module>FlexUnit4as3</module>
 		<module>FlexUnit4CIListener</module>
 		<module>FlexUnit4AirCIListener</module>
 		<module>FlexUnit4UIListener</module>
