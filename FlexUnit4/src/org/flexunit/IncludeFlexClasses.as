@@ -29,11 +29,11 @@ package org.flexunit
 {
 	import org.flexunit.async.AsyncTestResponder;
 	import org.flexunit.events.AsyncResponseEvent;
-	import org.flexunit.internals.TextListener;
+//	import org.flexunit.internals.TextListener;
 	import org.fluint.sequence.ISequenceAction;
 	import org.fluint.sequence.ISequencePend;
 	import org.fluint.sequence.ISequenceStep;
-	import org.fluint.sequence.SequenceBindingWaiter;
+//	import org.fluint.sequence.SequenceBindingWaiter;
 	import org.fluint.sequence.SequenceCaller;
 	import org.fluint.sequence.SequenceDelay;
 	import org.fluint.sequence.SequenceEventDispatcher;
@@ -55,7 +55,7 @@ package org.flexunit
 		private var flu1:ISequenceAction;
 		private var flu2:ISequencePend;
 		private var flu3:ISequenceStep;
-		private var flu4:SequenceBindingWaiter;
+//		private var flu4:SequenceBindingWaiter;
 		private var flu5:SequenceCaller;
 		private var flu6:SequenceDelay;
 		private var flu7:SequenceEventDispatcher;
@@ -64,9 +64,9 @@ package org.flexunit
 		private var flu10:SequenceWaiter;
 		private var flu11:VisualTestEnvironmentBuilder;
 		
-		private var flu13:TextListener;
-		private var flu14:FlexMXVisualTestEnvironment;
-		private var flu15:FlexEnvironmentBuilder;
+//		private var flu13:TextListener;
+//		private var flu14:FlexMXVisualTestEnvironment;
+//		private var flu15:FlexEnvironmentBuilder;
 
 		public function IncludeFlexClasses()
 		{

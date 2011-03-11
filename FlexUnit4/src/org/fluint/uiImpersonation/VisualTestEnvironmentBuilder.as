@@ -83,11 +83,11 @@ package org.fluint.uiImpersonation {
 		public function VisualTestEnvironmentBuilder( visualDisplayRoot:DisplayObjectContainer ) {
 			this.visualDisplayRoot = visualDisplayRoot;
 
-			CONFIG::useFlexClasses {
-				import org.fluint.uiImpersonation.flex.FlexEnvironmentBuilder;
-				
-				builder = new FlexEnvironmentBuilder( visualDisplayRoot );
-			}
+//			CONFIG::useFlexClasses {
+//				import org.fluint.uiImpersonation.flex.FlexEnvironmentBuilder;
+//				
+//				builder = new FlexEnvironmentBuilder( visualDisplayRoot );
+//			}
 			
 			if ( !builder ) {
 				builder = new ActionScriptEnvironmentBuilder( visualDisplayRoot );

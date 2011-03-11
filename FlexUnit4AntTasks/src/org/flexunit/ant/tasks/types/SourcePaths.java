@@ -65,8 +65,6 @@ public class SourcePaths extends CompilationFileSetCollection
          {
             String pathWithOutSuffix = file.substring(0, file.lastIndexOf('.'));
             String canonicalClassName = pathWithOutSuffix.replace(File.separatorChar, '.');
-//            String className = canonicalClassName.substring(canonicalClassName.lastIndexOf('.') + 1, canonicalClassName.length());
-//            elements.append(className);
             elements.append(canonicalClassName);
             elements.append(',');
          }

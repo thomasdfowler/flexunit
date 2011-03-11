@@ -168,14 +168,14 @@ package org.flexunit.internals.builders {
 			// We have a toggle in the compiler arguments so that we can choose whether or not the flex classes should
 			// be compiled into the FlexUnit swc.  For actionscript only projects we do not want to compile the
 			// flex classes since it will cause errors.
-			CONFIG::useFlexClasses {
-				try {
-					builder = getDefinitionByName( "org.flexunit.internals.builders.Fluint1Builder" ) as Class;
-					runner = new builder();
-				} catch ( error:Error ) {
-
-				}
-			}
+//			CONFIG::useFlexClasses {
+//				try {
+//					builder = getDefinitionByName( "org.flexunit.internals.builders.Fluint1Builder" ) as Class;
+//					runner = new builder();
+//				} catch ( error:Error ) {
+//
+//				}
+//			}
 
 			//If the runner has not be set to a Fluint1Builder, set the runner to a NullBuilder
 			if ( !runner ) {

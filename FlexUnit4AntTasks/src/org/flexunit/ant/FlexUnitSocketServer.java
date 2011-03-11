@@ -96,7 +96,7 @@ public class FlexUnitSocketServer
 
    /**
     * Creates the client connection. This method will pause until the connection
-    * is made or the timout limit is reached.
+    * is made or the timeout limit is reached.
     * 
     * Once a connection is established opens the in and out buffer.
     */

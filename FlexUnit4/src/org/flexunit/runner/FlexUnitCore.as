@@ -33,7 +33,7 @@ package org.flexunit.runner {
 	import flash.events.IEventDispatcher;
 	import flash.utils.*;
 	
-	import org.flexunit.IncludeFlexClasses;
+//	import org.flexunit.IncludeFlexClasses;
 	import org.flexunit.events.UnknownError;
 	import org.flexunit.experimental.theories.Theories;
 	import org.flexunit.internals.dependency.ExternalRunnerDependencyWatcher;
@@ -96,13 +96,13 @@ package org.flexunit.runner {
 		// We have a toggle in the compiler arguments so that we can choose whether or not the flex classes should
 		// be compiled into the FlexUnit swc.  For actionscript only projects we do not want to compile the
 		// flex classes since it will cause errors.
-		CONFIG::useFlexClasses {
-			// This class imports all Flex classes.
-			/**
-			 * @private
-			 */
-			private var t1:IncludeFlexClasses;
-		}
+//		CONFIG::useFlexClasses {
+//			// This class imports all Flex classes.
+//			/**
+//			 * @private
+//			 */
+//			private var t1:IncludeFlexClasses;
+//		}
 		
 		/**
 		 * @private

@@ -108,7 +108,6 @@ public class Compilation
       }
       catch (Exception e)
       {
-    	  e.printStackTrace();
     	  throw new BuildException("Could not create test runner from template.", e);
       }
    }

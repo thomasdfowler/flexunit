@@ -30,7 +30,7 @@ package org.flexunit.internals.runners.statements {
 	import flash.net.Responder;
 	import flash.utils.Dictionary;
 	
-	import mx.events.PropertyChangeEvent;
+//	import mx.events.PropertyChangeEvent;
 	import mx.rpc.IResponder;
 	
 	import org.flexunit.Assert;
@@ -51,9 +51,7 @@ package org.flexunit.internals.runners.statements {
 	import org.flexunit.token.AsyncTestToken;
 	import org.flexunit.token.ChildResult;
 	import org.flexunit.utils.ClassNameUtil;
-	CONFIG::useFlexClasses{
-	import org.fluint.sequence.SequenceBindingWaiter;
-	}
+//	import org.fluint.sequence.SequenceBindingWaiter;
 	import org.fluint.sequence.SequenceRunner;
 	
 	use namespace flexunit_internal;
@@ -244,7 +242,7 @@ package org.flexunit.internals.runners.statements {
 		 * 
 		 * @return an <code>IResponder</code> that will determine whether the <code>timeout</code> has been reached.
 		 */
-		CONFIG::useFlexClasses
+//		CONFIG::useFlexClasses
 		public function asyncResponder( responder:*, timeout:int, passThroughData:Object = null, timeoutHandler:Function = null ):IResponder { 
 
 			var asyncResponder:IAsyncTestResponder;
@@ -508,33 +506,33 @@ package org.flexunit.internals.runners.statements {
 		// We have a toggle in the compiler arguments so that we can choose whether or not the flex classes should
 		// be compiled into the FlexUnit swc.  For actionscript only projects we do not want to compile the
 		// flex classes since it will cause errors.
-		CONFIG::useFlexClasses
+//		CONFIG::useFlexClasses
 	    public function handleBindableNextSequence( event:Event, sequenceRunner:SequenceRunner ):void {
-	    	if ( sequenceRunner.getPendingStep() is SequenceBindingWaiter ) {
-
-				var sequenceBinding:SequenceBindingWaiter = sequenceRunner.getPendingStep() as SequenceBindingWaiter;
-
-		        if (event is PropertyChangeEvent) {
-		            var propName:Object = PropertyChangeEvent(event).property
-		
-		            if (propName != sequenceBinding.propertyName) {
-		                Assert.fail( "Incorrect Property Change Event Received" );
-		            }
-		        } 
-		        
-		        if ( event && event.target ) {
-					//Remove the listener for this particular item
-					sequenceBinding.changeWatcher.unwatch();
-			    	
-			    	//event.currentTarget.removeEventListener(event.type, handleBindableNextSequence );
-	
-					sequenceRunner.continueSequence( event );
-					
-					startAsyncTimers();
-				} 
-	    	} else {
-				Assert.fail( "Event Received out of Order" ); 
-	    	}
+//	    	if ( sequenceRunner.getPendingStep() is SequenceBindingWaiter ) {
+//
+//				var sequenceBinding:SequenceBindingWaiter = sequenceRunner.getPendingStep() as SequenceBindingWaiter;
+//
+//		        if (event is PropertyChangeEvent) {
+//		            var propName:Object = PropertyChangeEvent(event).property
+//		
+//		            if (propName != sequenceBinding.propertyName) {
+//		                Assert.fail( "Incorrect Property Change Event Received" );
+//		            }
+//		        } 
+//		        
+//		        if ( event && event.target ) {
+//					//Remove the listener for this particular item
+//					sequenceBinding.changeWatcher.unwatch();
+//			    	
+//			    	//event.currentTarget.removeEventListener(event.type, handleBindableNextSequence );
+//	
+//					sequenceRunner.continueSequence( event );
+//					
+//					startAsyncTimers();
+//				} 
+//	    	} else {
+//				Assert.fail( "Event Received out of Order" ); 
+//	    	}
 	    }
 		
 		/**

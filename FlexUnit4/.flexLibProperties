@@ -165,6 +165,7 @@
     <classEntry path="org.fluint.uiImpersonation.VisualTestEnvironmentBuilder"/>
     <classEntry path="org.fluint.uiImpersonation.actionScript.ActionScriptEnvironmentBuilder"/>
     <classEntry path="org.fluint.uiImpersonation.actionScript.ActionScriptVisualTestEnvironment"/>
+    <classEntry path="mx.rpc.IResponder"/>
   </includeClasses>
   <includeResources>
     <resourceEntry destPath="locale/en_US/metadata.properties" sourcePath="locale/en_US/metadata.properties"/>

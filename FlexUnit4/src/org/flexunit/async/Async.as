@@ -32,6 +32,8 @@ package org.flexunit.async
 	import flash.net.Responder;
 	import flash.utils.Timer;
 	
+	import mx.rpc.IResponder;
+	
 	import org.flexunit.internals.runners.statements.IAsyncHandlingStatement;
 	
 	/**
@@ -188,15 +190,15 @@ package org.flexunit.async
 		 * available to both the responder and the <code>timeoutHandler</code>.
 		 * @param timeoutHandler: The function that will be executed if the <code>timeout</code> period is reached.
 		 */
-		CONFIG::useFlexClasses {
-		import mx.rpc.IResponder;
+//		CONFIG::useFlexClasses {
+//		import mx.rpc.IResponder;
 		
 		public static function asyncResponder( testCase:Object, responder:*, timeout:int, passThroughData:Object = null, timeoutHandler:Function = null ):IResponder {
 			var asyncHandlingStatement:IAsyncHandlingStatement = AsyncLocator.getCallableForTest( testCase );
 			
 			return asyncHandlingStatement.asyncResponder( responder, timeout, passThroughData, timeoutHandler );
 		}
-		}
+//		}
 		/**
 		 * This method works in a similar fashion to handleEvent, however, it is intended to work with AsyncTokens and Responders as opposed to events. 
 		 * 
